@@ -1,0 +1,595 @@
+<xml version="1.0" encoding="utf-8">
+    <Settings>
+        <!-- Server Configuration - Server Definition -->
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Custom</Subtype>
+            <CustomSubtype>Network</CustomSubtype>
+            <Name>Number of network threads</Name>
+        </Setting>
+        <Setting>
+            <Type>ServerComponent</Type>
+            <Component>DssRoleClientServices</Component>
+            <ComponentSettingType>Security</ComponentSettingType>
+            <ComponentInterface>ClientServices6</ComponentInterface>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssSecurityPolicyPersistLoginCredential</Enumeration>
+            <Name>Authentication Policy</Name>
+            <Translations>0,None:1,Database:2,LDAP</Translations>
+        </Setting>
+
+        <Setting>
+            <Type>ServerObjectSourceCommand</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssSrcCmdEncryptionLevel</Enumeration>
+            <Name>Encryption Level</Name>
+            <Translations>0,Medium (TEA RC4 encryption with Ripe-MD 160 hashing):1,High (AES encryption with Ripe-MD 160 hashing)</Translations>
+        </Setting>
+
+        <Setting>
+            <Type>ServerComponent</Type>
+            <Component>DssRoleConfigurationSource</Component>
+            <ComponentSettingType>ChangeJournaling</ComponentSettingType>
+            <ComponentInterface>Dssource6</ComponentInterface>
+            <Subtype>Flag</Subtype>
+            <Enumeration>None</Enumeration>
+            <Name>Change Journaling Enabled</Name>
+            <Translations>0,False:1,True</Translations>
+        </Setting>
+
+
+        <!-- Server Configuration - Statistics -->
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>MultiFlag</Subtype>
+            <Enumeration>DssServerStatsLogging2AllProjects:DssServerStatsLogging2ProjectGUID</Enumeration>
+            <Name>Statistics Configuration</Name>
+            <Translations>Complete Session Logging:Single Instance Session Logging</Translations>
+        </Setting>
+        <!-- Server Configuration - Governing Rules -->
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerEnableBackgroundDIExecution</Enumeration>
+            <Name>Enable Background Execution</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMinFreeMemory</Enumeration>
+            <Name>Minimum machine free memory (%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxContractLimitAbsolute</Enumeration>
+            <Name>Maximum single allocation size(MBytes)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMemoryReserve</Enumeration>
+            <Name>Minimum Reserved memory (MBytes)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMemoryReservePercentage</Enumeration>
+            <Name>Minimum Reserved memory (%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxJobsPerServer</Enumeration>
+            <Name>Maximum number of Jobs</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxInteractiveJobsPerServer</Enumeration>
+            <Name>Maximum number of Interactive Jobs</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Combo</Subtype>
+            <Enumeration>DssServerMaxJobsPerServer:DssServerMaxInteractiveJobsPerServer</Enumeration>
+            <Operation>Subtract</Operation>
+            <Name>Maximum number of scheduled jobs</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxUserConnectionPerServer</Enumeration>
+            <Name>Maximum number of user sesions</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxUserConnectionIdleTime</Enumeration>
+            <Name>User session idle time</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxWebConnectionIdleTime</Enumeration>
+            <Name>Web user session idle time</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerExtendedSessionIdleTime</Enumeration>
+            <Name>Mobile APNS and GCM session idle time</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxXmlDrillPaths</Enumeration>
+            <Name>Maximum number of XML Drill Paths</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerXMLMaxMemoryConsumption</Enumeration>
+            <Name>Maximum memory consumption for XML(MB)</Name>
+            <Convert>B</Convert>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerPDFMaxMemoryConsumption</Enumeration>
+            <Name>Maximum memory consumption for PDF files(MB)</Name>
+            <Convert>B</Convert>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerExcelMaxMemoryConsumption</Enumeration>
+            <Name>Maximum memory consumption for Excel(MB)</Name>
+            <Convert>B</Convert>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerHtmlMaxMemoryConsumption</Enumeration>
+            <Name>Maximum memory consumption for HTML files(MB)</Name>
+            <Convert>B</Convert>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxUsedVirtualByte</Enumeration>
+            <Name>Enable Web request job throttling</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMaxUsedPrivateByte</Enumeration>
+            <Name>Maximum Intelligence Server use of total memory(%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>MultiFlag</Subtype>
+            <Enumeration>DssServerMemoryReserve:DssServerMemoryReservePercentage:DssServerMemoryRequestIdleTime
+            </Enumeration>
+            <Name>Enable MCM</Name>
+            <Translations>Enabled:Enabled:Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMemoryReservePercentage</Enumeration>
+            <Name>Minimum Reserved memory(%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerVirtualByteLimitPercent</Enumeration>
+            <Name>Maximum use of virtual address space(%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerMemoryRequestIdleTime</Enumeration>
+            <Name>Memory request idle time</Name>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerWSRPMaxMemoryConsumption</Enumeration>
+            <Name>Maximum RAM for Working set cache(MB)</Name>
+            <Convert>KB</Convert>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerEnableAutoSessionRecovery</Enumeration>
+            <Name>Enable Web User Session Recovery on Logout</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerCatalogMaxMemoryConsumption</Enumeration>
+            <Name>Maximum use of memory for Catalog Cache(MB)</Name>
+        </Setting>
+        <!--- Do DI stuff here -->
+
+        <Setting>
+            <Type>ServerObjectSourceFind</Type>
+            <Subtype>Generic</Subtype>
+            <FindType>DssDbRole3</FindType>
+            <Enumeration>DssTypeDBRole</Enumeration>
+            <Name>Data Import High</Name>
+            <GUID>819E2B79A8E7403CB5B89BF69ABC1E9A</GUID>
+            <Queue>1</Queue>
+        </Setting>
+
+        <Setting>
+            <Type>ServerObjectSourceFind</Type>
+            <Subtype>Generic</Subtype>
+            <FindType>DssDbRole3</FindType>
+            <Enumeration>DssTypeDBRole</Enumeration>
+            <Name>Data Import Medium</Name>
+            <GUID>819E2B79A8E7403CB5B89BF69ABC1E9A</GUID>
+            <Queue>2</Queue>
+        </Setting>
+
+        <Setting>
+            <Type>ServerObjectSourceFind</Type>
+            <Subtype>Generic</Subtype>
+            <FindType>DssDbRole3</FindType>
+            <Enumeration>DssTypeDBRole</Enumeration>
+            <Name>Data Import Low</Name>
+            <GUID>819E2B79A8E7403CB5B89BF69ABC1E9A</GUID>
+            <Queue>3</Queue>
+        </Setting>
+
+
+        <!--- LDAP STUFF HERE -->
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Xml</Subtype>
+            <Enumeration>DssServerAuthSettings</Enumeration>
+            <Name>LDAP Connectivity Driver</Name>
+            <Parent>ls</Parent>
+            <Attribute>ld</Attribute>
+        </Setting>
+
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Xml</Subtype>
+            <Enumeration>DssServerAuthSettings</Enumeration>
+            <Name>SSL Enabled</Name>
+            <Parent>ls</Parent>
+            <Attribute>lc</Attribute>
+        </Setting>
+
+        <!-- Server Configuration - Platform -->
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerHLRepositoryType</Enumeration>
+            <Name>History List Repository Type</Name>
+            <Translations>1,Database History List:2,File based History List:3,Hybrid History List</Translations>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerUserAffinityFlag</Enumeration>
+            <Name>User Affinity Cluster</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Server</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerUserAffinityLoadBalancingFlag</Enumeration>
+            <Name>Subscription Load Balancing</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+
+        <!-- Project Settings -->
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxReportExecutionTime</Enumeration>
+            <Name>Maximum Elapse Time for Interactive Reports</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxScheduledReportExecutionTime</Enumeration>
+            <Name>Maximum Elapse Time for Scheduled Reports</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxPromptWaitingTime</Enumeration>
+            <Name>Wait time for prompt answers</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxWHJobExecTime</Enumeration>
+            <Name>Maximum warehouse execution time</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxCubeResultRowCount</Enumeration>
+            <Name>Maximum Result rows for Intelligent cubes</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxDatamartResultRowCount</Enumeration>
+            <Name>Maximum Result rows for datamarts</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectFinalResultRowNumber</Enumeration>
+            <Name>Final Result Rows for Document/Dashboard Views</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxResultRowCount</Enumeration>
+            <Name>Final result Rows for All other reports</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxInternalResultRowCount </Enumeration>
+            <Name>All intermediate result rows</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxElementRowCount</Enumeration>
+            <Name>All element browsing result rows</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DSSServerProjectMaxSQLGenMemConsumption</Enumeration>
+            <Name>Maximum memory consumption during SQL Generation(MB)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxMemoryPerDataFetch</Enumeration>
+            <Name>Maximum memory consumption during data fetching(MB)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxMstrFileSize</Enumeration>
+            <Name>MicroStrategy (.mstr) file size(MB)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxJobPerUserAccount</Enumeration>
+            <Name>Maximum jobs per user account</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxJobPerUserConnection</Enumeration>
+            <Name>Maximum jobs per user session</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxJobPerProject</Enumeration>
+            <Name>Maximum jobs per project</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxInteractiveJobPerProject</Enumeration>
+            <Name>Maximum number of interactive jobs per project</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Combo</Subtype>
+            <Enumeration>DssServerProjectMaxJobPerProject:DssServerProjectMaxInteractiveJobPerProject</Enumeration>
+            <Operation>Subtract</Operation>
+            <Name>Maximum number of scheduled jobs per project</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxUserConnectionPerProject</Enumeration>
+            <Name>Maximum number of user sessions per project</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxInteractiveSessionPerUser</Enumeration>
+            <Name>Maximum number of concurrent interactive project sessions per user</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectDataUploadSizeLimit</Enumeration>
+            <Name>Import Data maximum file size(MB)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectCubeQuota</Enumeration>
+            <Name>Import Data maximum quota per user(MB)</Name>
+        </Setting>
+        <Setting>
+            <Type>ProjectVLDB</Type>
+            <Subtype>Flag</Subtype>
+            <PropertySet>VLDB Select</PropertySet>
+            <Property>MCE Join To Get Data Combination</Property>
+            <Name>MinRelate</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+
+
+        <!-- Caching -->
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectReportFileCachePath</Enumeration>
+            <Name>Cache File Directory</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerProjectCacheEncryptionOption</Enumeration>
+            <Name>Cache encryption level on disk</Name>
+            <Translations>0,None:1,Low:2,High</Translations>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxReportCacheMemConsumption</Enumeration>
+            <Name>Maximum Ram Usage for Dataset Caches(MB)</Name>
+            <Convert>KB</Convert>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxReportCacheCount</Enumeration>
+            <Name>Maximum number of dataset caches</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectRWDMaxMemoryConsumption</Enumeration>
+            <Name>Maximum Ram usage for formatted documents(MBytes)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectRWDMaxCacheCount</Enumeration>
+            <Name>Maximum number of Formatted Document caches</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectReportCacheSwapFactor</Enumeration>
+            <Name>Ram swap multiplier</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectReportCacheLKUPMaxRAM</Enumeration>
+            <Name>Maximum RAM for report cache index(%)</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssProjectObjectMaxCacheMemoryConsumption</Enumeration>
+            <Name>Object Server Maximum RAM usage(MB)</Name>
+            <Convert>KB</Convert>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxElementCacheMemConsumption</Enumeration>
+            <Name>Element Server Maximum RAM usage(MB)</Name>
+            <Convert>KB</Convert>
+        </Setting>
+
+
+        <!-- Intelligent Cubes -->
+
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectCubeStorage</Enumeration>
+            <Name>Intelligent Cube file directory</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxCubeMemUsage</Enumeration>
+            <Name>Intelligent Cube maximum RAM usage</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxCubeCount</Enumeration>
+            <Name>Maximum number of cubes</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectMaxCubeSizeForDownload</Enumeration>
+            <Name>Maximum cube size allowed for download</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectCubeIndexGrowthUpperbound</Enumeration>
+            <Name>Maximum % growth of an Intelligent Cube due to indexes</Name>
+        </Setting>
+        <Setting>
+            <Type>ProjectVLDB</Type>
+            <Subtype>Flag</Subtype>
+            <PropertySet>VLDB Select</PropertySet>
+            <Property>Cube for Ad Hoc Masterswitch</Property>
+            <Name>Enable Dynamic Sourcing</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>ProjectVLDB</Type>
+            <Subtype>Flag</Subtype>
+            <PropertySet>VLDB Select</PropertySet>
+            <Property>Cube Reuse for Ad Hoc For Current Cube Enabled</Property>
+            <Name>Make Intelligent Cubes available for Dynamic Sourcing by default</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>ProjectVLDB</Type>
+            <Subtype>Flag</Subtype>
+            <PropertySet>VLDB Select</PropertySet>
+            <Property>Cube Safe For Reuse For Ad Hoc Reports</Property>
+            <Name>Allow Dynamic Sourcing even if outer join properties are not set</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Generic</Subtype>
+            <Enumeration>DssServerProjectCubeIndexGrowthUpperbound</Enumeration>
+            <Name>Maximum % growth of an Intelligent Cube due to indexes</Name>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerProjectCubeDBMatchingFlag</Enumeration>
+            <Name>Create Intelligent Cubes by Database Connection</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerProjectCubeLoadOnStart</Enumeration>
+            <Name>Load Intelligent Cubes on startup</Name>
+            <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting>
+        <!-- comment out for now
+        <Setting>
+                <Type>ProjectVLDB</Type>
+                <Subtype>Flag</Subtype>
+                <PropertySet>PreferenceSet</PropertySet>
+                <Property>AllowDrillout</Property>
+                <Name>Allow Reports to Drill outside the cube</Name>
+                <Translations>0,Disabled:1,Enabled</Translations>
+        </Setting> -->
+        <Setting>
+            <Type>Project</Type>
+            <Subtype>Flag</Subtype>
+            <Enumeration>DssServerProjectCubePublishOption</Enumeration>
+            <Name>Load Intelligent Cubes on Publication</Name>
+            <Translations>0,Enabled:1,Disabled</Translations>
+        </Setting>
+    </Settings>
+</xml>

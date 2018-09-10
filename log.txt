@@ -1,0 +1,16 @@
+Attempting to connect to was-bjones10.corp.microstrategy.com on port 34952
+Successfully connected, writing data to out.txt
+Projects Available: microstrategy tutorial
+Projects Selected: All
+Dumping settings for project MicroStrategy Tutorial
+Dumping settings for project Human Resources Analysis Module
+Server settings saved successfully
+
+IP_address :was-bjones10.corp.microstrategy.com
+Port :34952
+MicroStrategy login :administrator
+Output File :out.xls
+Level :DEV
+Organization :was-bjones10.corp.microstrategy.com
+Environment :was-bjones10.corp.microstrategy.com
+Password :no password (blank)
